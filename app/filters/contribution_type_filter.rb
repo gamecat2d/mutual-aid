@@ -1,10 +1,12 @@
 class ContributionTypeFilter
-  def self.filter_group
-    { name: 'Contribution Types', filter_options: [
-      { id: 'ContributionType[Ask]', name: 'Ask' },
-      { id: 'ContributionType[Offer]', name: 'Offer' }
-    ]}
+  def self.filter_group_name
+    'Contribution Types'
   end
+
+  def self.filter_options
+    ALL_ALLOWED_TYPES
+  end
+
   ALL_ALLOWED_TYPES = ['Ask', 'Offer'].freeze
 
   attr_reader :parameters
