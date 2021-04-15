@@ -47,7 +47,7 @@ RSpec.describe ContributionBlueprint do
             'state' => contribution.service_area.location.state,
             'street_address' => contribution.service_area.location.street_address,
             'zip' => contribution.service_area.location.zip
-          },
+          }
         },
         # "map_location" => "44.5,-85.1",
         'title' => contribution.title,
