@@ -4,7 +4,7 @@ Context = Struct.new(
   :system_settings,
   :user,
   keyword_init: true
-) do
+) do # rubocop:disable Standard/SemanticBlocks
   def host_organization
     self[:host_organization] ||= Organization.host_organization
   end
