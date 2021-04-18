@@ -54,7 +54,7 @@ class ContributionsController < ApplicationController
   def filter_params
     return {} unless allowed_params.to_h.any?
 
-    allowed_params.to_h.filter { |key, _v| BrowseFilter::ALLOWED_PARAMS.keys.include? key }.tap do |hash|
+    allowed_params.to_h.filter { |key, _v| BrowseFilter::ALLOWED_PARAMS.key? key }.tap do |hash|
       hash.each_key { |key| hash[key] = hash[key].keys }
     end
   end
