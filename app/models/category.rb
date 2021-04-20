@@ -21,7 +21,7 @@ class Category < ApplicationRecord
   scope :as_filter_types, -> { roots.select(:id, :name) }
 
   def full_name
-    "#{parent&.name&.upcase + ": " if parent}#{parent.present? ? name : name.upcase}"
+    parent ? "#{parent.name.upcase}: #{name}" : name.upcase
   end
 
   def lineage
