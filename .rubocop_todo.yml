@@ -743,6 +743,7 @@ Style/SafeNavigation:
     - 'app/models/importers/custom_form_question_importer.rb'
     - 'app/policies/application_policy.rb'
     - 'spec/models/organization_spec.rb'
+    - 'app/lib/hide_restricted_fields_transformer.rb'
 
 # Offense count: 66
 # Cop supports --auto-correct.
